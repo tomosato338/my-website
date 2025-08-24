@@ -3,7 +3,7 @@ body {
     line-height: 1.8;
     letter-spacing: .8px;
     color: #120107;
-    font-family: "YakuHanJP_Narrow", "Zen Kaku Gothic New", sans-serif;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .wrapper {
@@ -26,7 +26,6 @@ body {
 .displayflex {
     display: flex;
     justify-content: center;
-    gap: 50px;
     align-items: center;
 }
 
@@ -235,17 +234,13 @@ li {
 
 /* テキストのスタイル */
 
-.title {
-    display: block;
-    color: #fff;
-    /* text-align: right; */
-}
-
 .title10 {
     text-align: center;
     /* text-align: right; */
 }
 
+
+/* 
 .title span {
     display: block;
     opacity: 0;
@@ -268,7 +263,7 @@ li {
 .bg.-visible .title span {
     opacity: 1;
     transform: translate(0, 0);
-}
+} */
 
 
 /****** Base style. ******/
@@ -282,13 +277,24 @@ body {
  レイアウト
 ---------------------------------*/
 
-.section {
+.c-section {
     padding: 80px 30px;
 }
 
 .wrapper1 {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translatey(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
 }
 
 
@@ -326,14 +332,25 @@ body {
 }
 
 .title {
-    font-size: 36px;
-    font-weight: normal;
+    font-size: 25px;
+    font-weight: 700;
     line-height: 1;
-    margin-bottom: 40px;
     /* text-align: center; */
     letter-spacing: .05em;
-    color: #343c56;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #0089A7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtitle {
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.subtitle2 {
+    font-size: 35px;
+    margin: 100px 0 40px 0;
+    font-weight: normal;
 }
 
 .min-title {
@@ -357,6 +374,7 @@ body {
 
 .myprof {
     text-align: justify;
+    padding: 10px 0 20px 0;
 }
 
 
@@ -405,11 +423,12 @@ body {
 }
 
 .header-nav-item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 80px;
 }
 
 .header-nav-item a {
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: 700;
     padding: 5px 0;
     letter-spacing: .1em;
     color: #343c56;
@@ -621,8 +640,32 @@ body {
 
 /* ???????????? */
 
+
+/* 青色ボタン */
+
+.btn-flat-border {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 1px #0089A7;
+    border-radius: 3px;
+    transition: .4s;
+    background: #0089A7;
+    color: white;
+}
+
+.btn-flat-border:hover {
+    background: #ffffff;
+    color: 0089A7;
+    border: solid 1px #0089A7;
+    color: #0089A7;
+}
+
 .mypic {
     box-shadow: -10px 30px 70px #b2b2b2;
+    max-width: 60%;
+    margin-left: auto;
 }
 
 .roll-relative {
@@ -635,9 +678,9 @@ body {
     /* margin: 100px auto; */
     font-size: 16px;
     position: absolute;
-    top: 300px;
-    right: 0px;
-    left: -70px;
+    top: 250px;
+    right: -250px;
+    left: 70px;
 }
 
 .pic-roll svg {
@@ -684,7 +727,7 @@ body {
     margin-bottom: -40px;
     justify-content: center;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .works-item {
@@ -715,6 +758,13 @@ body {
 
 .works-name2 span {
     background-color: #c38e2d;
+    color: #ffffff;
+    padding: 3px;
+    margin-right: 10px;
+}
+
+.works-name3 span {
+    background-color: #c3492d;
     color: #ffffff;
     padding: 3px;
     margin-right: 10px;
@@ -804,6 +854,7 @@ body {
 
 .page-top .material-icons-outlined {
     vertical-align: bottom;
+    color: white;
 }
 
 
@@ -819,7 +870,7 @@ body {
 .copyright {
     font-size: 10px;
     text-align: center;
-    color: #a3bb95;
+    color: #ffffff;
 }
 
 
